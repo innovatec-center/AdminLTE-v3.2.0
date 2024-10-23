@@ -1,0 +1,65 @@
+/* Ajustar el contenedor del toggle y los íconos */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center; /* Alinea los íconos verticalmente en el centro */
+    justify-content: center;
+    gap: 5px; /* Añade espacio entre los íconos y el toggle */
+    color: #444; /* Color de los íconos */
+}
+
+.theme-switch-wrapper i {
+    font-size: 18px; /* Ajustar el tamaño de los íconos para que sea consistente */
+}
+
+/* Ajustar el tamaño y estilo del toggle */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4c6ef5; /* Color del toggle activado */
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px); /* Ajustar según el tamaño del toggle */
+}
+
+/* Ajustes adicionales para la altura de los elementos del navbar */
+.navbar .nav-link, .navbar .theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%; /* Asegura que todo esté alineado verticalmente */
+}
