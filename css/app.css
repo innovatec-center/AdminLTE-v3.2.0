@@ -63,3 +63,15 @@ input:checked + .slider:before {
     align-items: center;
     height: 100%; /* Asegura que todo esté alineado verticalmente */
 }
+
+/* Actualizar la adaptación del cambio del tema en el select del DataTable */
+body.dark-mode select.dt-input {
+    background-color: #495057 !important; /* Fondo oscuro */
+    color: #fff !important; /* Texto blanco */
+    border-color: #6c757d !important; /* Borde gris oscuro */
+}
+
+body.dark-mode select.dt-input option {
+    background-color: #343a40 !important; /* Fondo oscuro para las opciones */
+    color: #fff !important; /* Texto blanco */
+}
